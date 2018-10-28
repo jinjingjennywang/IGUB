@@ -1,0 +1,140 @@
+---
+title: "IGUB-long analysis"
+output: html_notebook
+---
+analysis of the two-part information gain and uncertainty in belief project, asking whether uncertainty in preschooler's intuitive theories in different domains drive explanation (information) seeking.
+
+```{r}
+rm(list = ls(all = TRUE))
+#load needed libraries
+library(psych)
+library(gdata)
+library(data.table)
+library(ggplot2)
+
+mydata  = read.table(file = "/Users/jennywang/Google Drive/cocodev/IGUB/IGUB_long_data.csv", sep=",",header=TRUE, na.strings="")
+mydata=subset(mydata,mydata$yesbias==0)
+colnames(mydata)[1]<- "SubID"
+
+```
+```{r}
+###overall descriptives
+mydata$ToM=as.numeric(mydata$ToM=='table')
+mydata$Germ=as.numeric(mydata$Germ=='temp')
+mydata$Psycho=as.numeric(mydata$Psycho=='phone(tummy)')
+des_m = describeBy(mydata,group=NULL,na.rm=TRUE)
+```
+
+```{r}
+cor(mydata$ToM,mydata$ToM_ass_T)
+cor(mydata$Germ,mydata$Germ_ass_T)
+cor(mydata$Psycho,mydata$Psych_ass_T)
+```
+
+```{r}
+#SRCD analysis did median-split for ToM and Germ, and >1 for Psychosomatic
+mydata$ToMf = as.factor(mydata$ToM_ass_T>=median(mydata$ToM_ass_T))
+mydata$Germf = as.factor(mydata$Germ_ass_T>=median(mydata$Germ_ass_T))
+# mydata$Psychf = as.factor(mydata$Psych_ass_T>=median(mydata$Psych_ass_T))
+# 
+# mydata$ToMf = as.factor(mydata$ToM_ass_T>=2)
+# mydata$Germf = as.factor(mydata$Germ_ass_T>=2)
+mydata$Psychf = as.factor(mydata$Psych_ass_T>=2)
+mydata$Agef = as.factor(mydata$Age>=median(mydata$Age))
+
+
+```
+
+```{r}
+des_T = describeBy(mydata$ToM,group=mydata$ToMf,na.rm=TRUE,mat=TRUE)
+des_G = describeBy(mydata$Germ,group=mydata$Germf,na.rm=TRUE,mat=TRUE)
+des_P = describeBy(mydata$Psycho,group=mydata$Psychf,na.rm=TRUE,mat=TRUE)
+des_all=rbind(des_T,des_G,des_P)
+des_all$item=c("ToM","ToM","Germ","Germ","Psych","Psych")
+levels(des_all$group1)[levels(des_all$group1)=="FALSE"]<-"Lower"
+levels(des_all$group1)[levels(des_all$group1)=="TRUE"]<-"Higher"
+
+```
+
+```{r}
+ggplot(data=des_all,aes(x=item,y=mean,fill=group1))+
+  geom_bar(stat="identity",position=position_dodge())+
+  geom_errorbar(aes(ymin=mean-se,ymax=mean+se),width=.1,
+                position=position_dodge(.9))+
+  ylim(0,1)+
+  theme_bw()
+```
+
+```{r}
+#ToM
+temp.count = mydata[,c("ToM","ToMf")]
+temp.table = table(temp.count)
+temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.value)
+temp.table
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+```
+
+```{r}
+#Germ
+temp.count = mydata[,c("Germ","Germf")]
+temp.table = table(temp.count)
+temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.value)
+temp.table
+
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+
+```
+
+```{r}
+#Psychosomatic
+temp.count = mydata[,c("Psycho","Psychf")]
+temp.table = table(temp.count)
+temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.value)
+temp.table
+
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+
+```
+
+```{r}
+#combine Germ and ToM
+temp.table=table(mydata[,c("Germ","Germf")])+table(mydata[,c("ToM","ToMf")])
+temp.table
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+
+```
+
+```{r}
+#linear model for combining Germ and ToM
+cdata <- mydata[,c("SubID","ToM","ToMf")]
+summary(aov(ToM~ToMf,data=cdata))
+
+cdata <- mydata[,c("SubID","Germ","Germf")]
+summary(aov(Germ~Germf,data=cdata))
+
+#cdata<-melt(cdata,id=c("SubID","ToMf"))
+#summary(aov(value~ToMf*variable+Error(SubID),data=cdata))
+```
+
+```{r}
+#combine 3 domains
+temp.table=table(mydata[,c("ToM","ToMf")])+table(mydata[,c("Germ","Germf")])+table(mydata[,c("Psycho","Psychf")])
+temp.table
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+```
+
+```{r}
+#combine 3 domains analyze effect of age
+temp.table=table(mydata[,c("ToM","Agef")])+table(mydata[,c("Germ","Agef")])+table(mydata[,c("Psycho","Agef")])
+temp.table
+chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+```
+
+
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file). 
+
+The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike *Knit*, *Preview* does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.
+

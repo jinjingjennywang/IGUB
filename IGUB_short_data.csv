@@ -1,44 +1,69 @@
-,Subject ID,Gender,Test date,Age,condition,condition2,psycho,psycho group,testing choice,checking yes,checking no,Charlie,Gray_check,Aiden,London_check,August,Andy_check,Ari,Alex,Taylor_check,Blake,Jessie_check
-7,lab1,female,03/30/18,4.67,exp1,explanation,2,2uncertain,tummy,66.67%,100.00%,0,1,0,0,0,0,0,1,1,1,0
-8,lab2,Male,03/30/18,6.62,pre1,prediction,2,2uncertain,tummy,66.67%,100.00%,0,1,0,0,1,0,0,1,1,0,0
-9,Zoo3,male,4/6/18,6.75,pre2,prediction,4,2uncertain,sore foot,66.67%,66.67%,1,1,1,1,0,0,0,1,1,1,0
-10,Zoo4,male,4/6/18,6.58,exp2,explanation,1,1certain wrong,sore foot,66.67%,100.00%,1,1,0,0,0,0,0,0,1,0,0
-11,RL09,male,04/18/18,5.38,pre2,prediction,5,3certain correct,tummy,66.67%,100.00%,1,1,1,0,1,0,1,0,1,1,0
-12,WC12,female,04/19/18,3.52,pre2,prediction,0,1certain wrong,tummy,33.33%,100.00%,0,1,0,0,0,0,0,0,0,0,0
-13,WC10,male,04/19/18,3.34,exp2,explanation,1,1certain wrong,sore foot,33.33%,100.00%,0,1,0,0,1,0,0,0,0,0,0
-14,NE-26,male,04/28/18,6.11,pre1,prediction,2,2uncertain,sore foot,66.67%,100.00%,1,1,0,0,0,0,0,1,1,0,0
-15,NE-1,Female,04/28/18,6.30,exp2,explanation,3,2uncertain,sore foot,66.67%,66.67%,1,1,1,0,0,0,0,1,1,0,1
-16,NE-28,female,04/28/18,5.00,pre2,prediction,6,3certain correct,sore foot,66.67%,0.00%,1,1,1,1,1,1,1,1,1,1,1
-17,NE-4,male,04/28/18,5.86,exp1,explanation,6,3certain correct,tummy,66.67%,66.67%,1,1,1,0,1,0,1,1,1,1,1
-18,NE-5,male,04/28/18,6.58,pre1,prediction,3,2uncertain,sore foot,66.67%,100.00%,1,1,0,0,0,0,1,1,1,0,0
-19,NE-33,male,04/28/18,3.81,exp2,explanation,5,3certain correct,sore foot,33.33%,33.33%,1,1,1,0,0,1,1,1,0,1,1
-20,NE-7,female,04/28/18,3.15,pre2,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-21,NE-34,female,04/28/18,6.72,exp1,explanation,5,3certain correct,tummy,66.67%,100.00%,1,1,1,0,1,0,1,1,1,0,0
-22,NE-35,female,04/28/18,4.18,pre2,prediction,6,3certain correct,sore foot,66.67%,66.67%,1,1,1,0,1,1,1,1,1,1,0
-23,NE-37,male,04/28/18,3.92,exp1,explanation,5,3certain correct,sore foot,66.67%,33.33%,1,1,0,1,1,1,1,1,1,1,0
-24,NE-8,female,04/28/18,2.89,pre2,prediction,6,3certain correct,tummy,66.67%,0.00%,1,1,1,1,1,1,1,1,1,1,1
-25,NE-38,Female,04/28/18,6.23,pre2,prediction,3,2uncertain,sore foot,66.67%,100.00%,1,1,1,0,0,0,0,1,1,0,0
-26,NB-61,male,04/28/18,4.67,exp1,explanation,4,2uncertain,sore foot,33.33%,0.00%,1,0,1,1,0,1,1,1,1,0,1
-27,NB-64,female,04/28/18,6.75,exp1,explanation,0,1certain wrong,tummy,66.67%,100.00%,0,1,0,0,0,0,0,0,1,0,0
-28,NB-39,female,04/28/18,5.14,exp2,explanation,1,1certain wrong,tummy,66.67%,100.00%,0,1,1,0,0,0,0,0,1,0,0
-29,NB-12,male,04/28/18,5.59,exp1,explanation,0,1certain wrong,sore foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-30,NB-13,male,04/28/18,6.37,exp1,explanation,5,3certain correct,sore foot,66.67%,100.00%,1,1,1,0,0,0,1,1,1,1,0
-31,NB-16,female,04/28/18,6.67,pre1,prediction,3,2uncertain,tummy,66.67%,100.00%,1,1,1,0,0,0,0,1,1,0,0
-32,NB-42,female,04/28/18,6.20,pre2,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-33,NB-76,male,04/28/18,4.49,pre2,prediction,4,2uncertain,sore foot,66.67%,66.67%,1,1,1,0,0,1,1,0,1,1,0
-34,NB-22,N?A,04/28/18,4.70,exp1,explanation,0,1certain wrong,sore foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-35,NB-20,male,04/28/18,3.95,exp2,explanation,6,3certain correct,sore foot,66.67%,33.33%,1,1,1,1,1,0,1,1,1,1,1
-36,NB-5,male,04/28/18,5.03,exp2,explanation,3,2uncertain,tummy,33.33%,33.33%,0,0,1,1,0,1,1,0,1,1,0
-37,PS-9,male,05/21/18,3.51,pre1,prediction,1,1certain wrong,foot,0.00%,100.00%,1,0,0,0,0,0,0,0,0,0,0
-38,PS-3,male,05/21/18,3.81,pre1,prediction,4,2uncertain,foot,66.67%,33.33%,0,1,1,1,0,1,1,1,1,1,0
-39,PS-2,male,05/21/18,3.84,pre1,prediction,5,3certain correct,tummy,66.67%,33.33%,0,1,1,0,1,1,1,1,1,1,1
-40,PS-1,female,05/21/18,4.94,exp2,explanation,4,2uncertain,tummy,66.67%,66.67%,1,1,0,0,0,1,1,1,1,1,0
-41,PS-4,female,05/21/18,4.75,pre1,prediction,5,3certain correct,foot,0.00%,66.67%,1,0,1,1,1,0,0,1,0,1,0
-42,PS-13,male,05/29/18,5.03,pre2,prediction,3,2uncertain,foot,33.33%,66.67%,0,0,0,1,1,0,0,1,1,1,0
-43,PS-7,male,05/29/18,4.50,pre1,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-44,PS-10,male,05/29/18,4.68,Pre2,prediction,1,1certain wrong,tummy,33.33%,66.67%,0,1,0,1,0,0,0,0,0,1,0
-45,PS-5,female,05/29/18,4.77,exp1,explanation,2,2uncertain,tummy,66.67%,100.00%,1,1,0,0,0,0,0,1,1,0,0
-46,HM-12,female,05/30/18,5.60,exp1,explanation,0,1certain wrong,foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0
-47,HM-14,male,05/30/18,5.48,pre1,prediction,1,1certain wrong,foot,33.33%,100.00%,0,0,1,0,0,0,0,0,1,0,0
-48,HM-16,female,05/30/18,5.37,exp2,explanation,2,2uncertain,foot,66.67%,66.67%,1,1,0,0,0,0,0,1,1,0,1
-49,HM-20,male,05/30/18,5.06,exp2,explanation,1,1certain wrong,foot,0.00%,100.00%,0,0,1,0,0,0,0,0,0,0,0
+,Subject ID,Gender,Test date,Age,condition,condition2,psycho,psycho group,testing choice,checking yes,checking no,Charlie,Gray_check,Aiden,London_check,August,Andy_check,Ari,Alex,Taylor_check,Blake,Jessie_check,Total,baseline
+7,lab1,female,3/30/18,4.67,exp1,explanation,2,2uncertain,tummy,66.67%,100.00%,0,1,0,0,0,0,0,1,1,1,0,4,
+8,lab2,Male,3/30/18,6.62,pre1,prediction,2,2uncertain,tummy,66.67%,100.00%,0,1,0,0,1,0,0,1,1,0,0,4,
+9,Zoo3,male,4/6/18,6.75,pre2,prediction,4,2uncertain,sore foot,66.67%,66.67%,1,1,1,1,0,0,0,1,1,1,0,7,
+10,Zoo4,male,4/6/18,6.58,exp2,explanation,1,1certain wrong,sore foot,66.67%,100.00%,1,1,0,0,0,0,0,0,1,0,0,3,
+11,RL09,male,4/18/18,5.38,pre2,prediction,5,3certain correct,tummy,66.67%,100.00%,1,1,1,0,1,0,1,0,1,1,0,7,
+12,WC12,female,4/19/18,3.52,pre2,prediction,0,1certain wrong,tummy,33.33%,100.00%,0,1,0,0,0,0,0,0,0,0,0,1,
+13,WC10,male,4/19/18,3.34,exp2,explanation,1,1certain wrong,sore foot,33.33%,100.00%,0,1,0,0,1,0,0,0,0,0,0,2,
+14,NE-26,male,4/28/18,6.11,pre1,prediction,2,2uncertain,sore foot,66.67%,100.00%,1,1,0,0,0,0,0,1,1,0,0,4,
+15,NE-1,Female,4/28/18,6.3,exp2,explanation,3,2uncertain,sore foot,66.67%,66.67%,1,1,1,0,0,0,0,1,1,0,1,6,
+16,NE-28,female,4/28/18,5,pre2,prediction,6,3certain correct,sore foot,66.67%,0.00%,1,1,1,1,1,1,1,1,1,1,1,11,
+17,NE-4,male,4/28/18,5.86,exp1,explanation,6,3certain correct,tummy,66.67%,66.67%,1,1,1,0,1,0,1,1,1,1,1,9,
+18,NE-5,male,4/28/18,6.58,pre1,prediction,3,2uncertain,sore foot,66.67%,100.00%,1,1,0,0,0,0,1,1,1,0,0,5,
+19,NE-33,male,4/28/18,3.81,exp2,explanation,5,3certain correct,sore foot,33.33%,33.33%,1,1,1,0,0,1,1,1,0,1,1,8,
+20,NE-7,female,4/28/18,3.15,pre2,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+21,NE-34,female,4/28/18,6.72,exp1,explanation,5,3certain correct,tummy,66.67%,100.00%,1,1,1,0,1,0,1,1,1,0,0,7,
+22,NE-35,female,4/28/18,4.18,pre2,prediction,6,3certain correct,sore foot,66.67%,66.67%,1,1,1,0,1,1,1,1,1,1,0,9,
+23,NE-37,male,4/28/18,3.92,exp1,explanation,5,3certain correct,sore foot,66.67%,33.33%,1,1,0,1,1,1,1,1,1,1,0,9,
+24,NE-8,female,4/28/18,2.89,pre2,prediction,6,3certain correct,tummy,66.67%,0.00%,1,1,1,1,1,1,1,1,1,1,1,11,
+25,NE-38,Female,4/28/18,6.23,pre2,prediction,3,2uncertain,sore foot,66.67%,100.00%,1,1,1,0,0,0,0,1,1,0,0,5,
+26,NB-61,male,4/28/18,4.67,exp1,explanation,4,2uncertain,sore foot,33.33%,0.00%,1,0,1,1,0,1,1,1,1,0,1,8,
+27,NB-64,female,4/28/18,6.75,exp1,explanation,0,1certain wrong,tummy,66.67%,100.00%,0,1,0,0,0,0,0,0,1,0,0,2,
+28,NB-39,female,4/28/18,5.14,exp2,explanation,1,1certain wrong,tummy,66.67%,100.00%,0,1,1,0,0,0,0,0,1,0,0,3,
+29,NB-12,male,4/28/18,5.59,exp1,explanation,0,1certain wrong,sore foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+30,NB-13,male,4/28/18,6.37,exp1,explanation,5,3certain correct,sore foot,66.67%,100.00%,1,1,1,0,0,0,1,1,1,1,0,7,
+31,NB-16,female,4/28/18,6.67,pre1,prediction,3,2uncertain,tummy,66.67%,100.00%,1,1,1,0,0,0,0,1,1,0,0,5,
+32,NB-42,female,4/28/18,6.2,pre2,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+33,NB-76,male,4/28/18,4.49,pre2,prediction,4,2uncertain,sore foot,66.67%,66.67%,1,1,1,0,0,1,1,0,1,1,0,7,
+34,NB-22,N?A,4/28/18,4.7,exp1,explanation,0,1certain wrong,sore foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+35,NB-20,male,4/28/18,3.95,exp2,explanation,6,3certain correct,sore foot,66.67%,33.33%,1,1,1,1,1,0,1,1,1,1,1,10,
+36,NB-5,male,4/28/18,5.03,exp2,explanation,3,2uncertain,tummy,33.33%,33.33%,0,0,1,1,0,1,1,0,1,1,0,6,
+37,PS-9,male,5/21/18,3.51,pre1,prediction,1,1certain wrong,foot,0.00%,100.00%,1,0,0,0,0,0,0,0,0,0,0,1,
+38,PS-3,male,5/21/18,3.81,pre1,prediction,4,2uncertain,foot,66.67%,33.33%,0,1,1,1,0,1,1,1,1,1,0,8,
+39,PS-2,male,5/21/18,3.84,pre1,prediction,5,3certain correct,tummy,66.67%,33.33%,0,1,1,0,1,1,1,1,1,1,1,9,
+40,PS-1,female,5/21/18,4.94,exp2,explanation,4,2uncertain,tummy,66.67%,66.67%,1,1,0,0,0,1,1,1,1,1,0,7,
+41,PS-4,female,5/21/18,4.75,pre1,prediction,5,3certain correct,foot,0.00%,66.67%,1,0,1,1,1,0,0,1,0,1,0,6,
+42,PS-13,male,5/29/18,5.03,pre2,prediction,3,2uncertain,foot,33.33%,66.67%,0,0,0,1,1,0,0,1,1,1,0,5,
+43,PS-7,male,5/29/18,4.5,pre1,prediction,0,1certain wrong,tummy,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+44,PS-10,male,5/29/18,4.68,Pre2,prediction,1,1certain wrong,tummy,33.33%,66.67%,0,1,0,1,0,0,0,0,0,1,0,3,
+45,PS-5,female,5/29/18,4.77,exp1,explanation,2,2uncertain,tummy,66.67%,100.00%,1,1,0,0,0,0,0,1,1,0,0,4,
+46,HM-12,female,5/30/18,5.6,exp1,explanation,0,1certain wrong,foot,0.00%,100.00%,0,0,0,0,0,0,0,0,0,0,0,0,
+47,HM-14,male,5/30/18,5.48,pre1,prediction,1,1certain wrong,foot,33.33%,100.00%,0,0,1,0,0,0,0,0,1,0,0,2,
+48,HM-16,female,5/30/18,5.37,exp2,explanation,2,2uncertain,foot,66.67%,66.67%,1,1,0,0,0,0,0,1,1,0,1,5,
+49,HM-20,male,5/30/18,5.06,exp2,explanation,1,1certain wrong,foot,0.00%,100.00%,0,0,1,0,0,0,0,0,0,0,0,1,
+50,KC-14,male,10/10/18,5.058823529,exp1,explanation,6,,tummy,,,1,1,1,1,1,1,1,1,1,1,1,11,
+51,KC-10,female,10/10/18,5.534883721,exp1,explanation,2,,foot,,,0,1,0,0,0,0,1,1,1,0,0,4,
+52,KC-5,female,10/10/18,5.253077975,exp2,explanation,4,,foot,,,1,1,1,0,1,0,0,0,1,1,1,7,
+53,KC-6,male,10/10/18,5.452804378,exp1,explanation,4,,tummy,,,0,1,1,0,1,0,1,0,1,1,0,6,
+54,NM-1,female,10/14/18,7.783857729,exp1,explanation,2,,foot,,,0,1,1,0,0,0,0,1,1,0,0,4,
+55,NM-2,male,10/14/18,6.295485636,exp2,explanation,1,,tummy,,,0,1,0,0,0,0,0,1,1,0,0,3,
+56,P_07,Male,10/12/18,4.667578659,exp2,explanation,4,,foot,,,1,1,1,1,0,1,1,1,1,0,1,9,
+57,P_08,Female,10/12/18,4.218878249,exp1,explanation,0,,foot,,,0,0,0,0,0,0,0,0,1,0,0,1,
+58,P_09,Male,10/12/18,4.218878249,exp1,explanation,6,,tummy,,,1,1,1,1,1,1,1,1,1,1,1,11,
+59,P_11,Male,10/12/18,4.859097127,exp1,explanation,0,,foot,,,0,1,0,0,0,0,0,0,1,0,0,2,
+60,P_12,Female,10/12/18,4.418604651,exp2,explanation,6,,tummy,,,1,1,1,1,1,1,1,1,1,1,1,11,
+61,P_16,Male,10/12/18,4.935704514,exp1,explanation,1,,tummy,,,1,1,0,0,0,0,0,0,1,0,0,3,
+62,RL-13,female,10/17/18,4.008207934,exp2,explanation,1,,tummy,,,1,1,0,0,0,0,0,0,1,0,0,3,head
+63,RL-7,Male,10/17/18,4.251709986,exp2,explanation,6,,tummy,,,1,1,1,0,1,0,1,1,1,1,0,8,head
+64,RL-16,male,10/17/18,4.675786594,exp2,explanation,0,,tummy,,,0,0,0,0,0,0,0,0,0,0,0,0,head
+65,RL-15,male,10/17/18,4.785225718,exp2,explanation,2,,tummy,,,1,1,1,0,0,0,0,0,0,0,0,3,tummy
+66,RL-17,male,10/17/18,5.031463748,exp2,explanation,1,,tummy,,,0,1,1,0,0,0,0,0,1,0,0,3,head
+67,RL-4,male,10/17/18,5.222982216,exp1,explanation,0,,foot,,,0,0,0,0,0,0,0,0,1,0,0,1,tummy
+68,LS_43,Female,10/19/18,4.960328317,exp2,explanation,1,,foot,,,0,1,1,0,0,0,0,0,1,0,0,3,tummy
+69,LS_45,Female,10/19/18,4.960328317,exp2,explanation,1,,foot,,,1,1,0,0,0,0,0,0,0,0,0,2,tummy
+70,LS_61,Female,10/19/18,4.960328317,exp1,explanation,4,,foot,,,1,1,0,1,1,0,0,1,1,1,0,7,head
+71,LS_66,Female,10/19/18,4.372093023,exp2,explanation,5,,tummy,,,1,1,0,0,1,1,1,1,1,1,1,9,head
+72,LS_72,male,10/19/18,4.949384405,exp1,explanation,6,,tummy,,,1,1,1,0,1,0,1,1,1,1,0,8,head
+73,LS_78,Male,10/19/18,4.49247606,exp1,explanation,5,,foot,,,1,1,1,1,0,1,1,1,1,1,1,10,tummy
+74,LS_83,Female,10/19/18,4.287277702,exp1,explanation,3,,tummy,,,1,1,1,1,0,0,0,1,1,0,0,6,head
