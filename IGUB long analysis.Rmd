@@ -13,7 +13,11 @@ library(data.table)
 library(ggplot2)
 
 mydata  = read.table(file = "/Users/jennywang/Google Drive/cocodev/IGUB/IGUB_long_data.csv", sep=",",header=TRUE, na.strings="")
-mydata=subset(mydata,mydata$yesbias==0)
+mydata[,c(23:34)] = as.numeric(mydata[,c(23:34)]=="y")
+mydata$totalyes = rowMeans(mydata[,c(23:34)])
+
+mydata=subset(mydata,mydata$yesnobias==0)
+
 colnames(mydata)[1]<- "SubID"
 
 ```
@@ -22,6 +26,7 @@ colnames(mydata)[1]<- "SubID"
 mydata$ToM=as.numeric(mydata$ToM=='table')
 mydata$Germ=as.numeric(mydata$Germ=='temp')
 mydata$Psycho=as.numeric(mydata$Psycho=='phone(tummy)')
+
 des_m = describeBy(mydata,group=NULL,na.rm=TRUE)
 ```
 
@@ -32,14 +37,18 @@ cor(mydata$Psycho,mydata$Psych_ass_T)
 ```
 
 ```{r}
+#plot(mydata$ToM_ass_T,mydata$ToM)
+```
+
+```{r}
 #SRCD analysis did median-split for ToM and Germ, and >1 for Psychosomatic
 mydata$ToMf = as.factor(mydata$ToM_ass_T>=median(mydata$ToM_ass_T))
 mydata$Germf = as.factor(mydata$Germ_ass_T>=median(mydata$Germ_ass_T))
-# mydata$Psychf = as.factor(mydata$Psych_ass_T>=median(mydata$Psych_ass_T))
-# 
+mydata$Psychf = as.factor(mydata$Psych_ass_T>=median(mydata$Psych_ass_T))
+# # 
 # mydata$ToMf = as.factor(mydata$ToM_ass_T>=2)
 # mydata$Germf = as.factor(mydata$Germ_ass_T>=2)
-mydata$Psychf = as.factor(mydata$Psych_ass_T>=2)
+mydata$Psychff = as.factor(mydata$Psych_ass_T>=2)
 mydata$Agef = as.factor(mydata$Age>=median(mydata$Age))
 
 
@@ -72,6 +81,8 @@ temp.table = table(temp.count)
 temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.value)
 temp.table
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
+
 ```
 
 ```{r}
@@ -82,17 +93,22 @@ temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.val
 temp.table
 
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
 
 ```
 
 ```{r}
-#Psychosomatic
-temp.count = mydata[,c("Psycho","Psychf")]
+#Psychosomatic super low vs. higher
+temp.count = mydata[,c("Psycho","Psychff")]
 temp.table = table(temp.count)
 temp.chisq = cbind(chisq.test(temp.table)$statistic,chisq.test(temp.table)$p.value)
 temp.table
 
+binom.test(11,13,0.5)
+chisq.test(temp.table[,1])
+
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
 
 ```
 
@@ -101,6 +117,7 @@ chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
 temp.table=table(mydata[,c("Germ","Germf")])+table(mydata[,c("ToM","ToMf")])
 temp.table
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
 
 ```
 
@@ -121,6 +138,12 @@ summary(aov(Germ~Germf,data=cdata))
 temp.table=table(mydata[,c("ToM","ToMf")])+table(mydata[,c("Germ","Germf")])+table(mydata[,c("Psycho","Psychf")])
 temp.table
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
+
+#is low-performers preferring, or is high-performers ignoring?
+binom.test(43,64,0.5)
+binom.test(42,86,0.5)
+
 ```
 
 ```{r}
@@ -128,6 +151,8 @@ chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
 temp.table=table(mydata[,c("ToM","Agef")])+table(mydata[,c("Germ","Agef")])+table(mydata[,c("Psycho","Agef")])
 temp.table
 chisq.test(temp.table,simulate.p.value=TRUE,B=2000)
+chisq.test(temp.table)
+
 ```
 
 
